@@ -1,27 +1,7 @@
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
-import { useToast } from '@/hooks/use-toast';
 import Icon from '@/components/ui/icon';
 
 const Index = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    startDate: '',
-  });
-
   const courseDates = [
     '23 ноября 2025',
     '10 января 2026',
@@ -31,42 +11,6 @@ const Index = () => {
     '19 сентября 2026',
     '14 ноября 2026',
   ];
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    try {
-      const response = await fetch('https://functions.poehali.dev/6f363557-bc4d-4ba0-83c7-04176bfcffaa', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-      
-      const data = await response.json();
-      
-      if (response.ok && data.success) {
-        toast({
-          title: 'Заявка отправлена!',
-          description: 'Скоро свяжемся с вами для подтверждения записи.',
-        });
-        setFormData({ name: '', phone: '', email: '', startDate: '' });
-      } else {
-        toast({
-          title: 'Ошибка',
-          description: data.error || 'Не удалось отправить заявку. Попробуйте позже.',
-          variant: 'destructive',
-        });
-      }
-    } catch (error) {
-      toast({
-        title: 'Ошибка',
-        description: 'Не удалось отправить заявку. Проверьте подключение к интернету.',
-        variant: 'destructive',
-      });
-    }
-  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -296,90 +240,45 @@ const Index = () => {
             <Card className="bg-card border-accent shadow-2xl">
               <CardContent className="p-8">
                 <div className="text-center mb-8">
-                  <Icon name="PenTool" size={40} className="text-secondary mx-auto mb-4" />
+                  <Icon name="MessageCircle" size={40} className="text-secondary mx-auto mb-4" />
                   <h3 className="text-3xl font-bold mb-2 text-foreground">Записаться на курс</h3>
-                  <p className="text-muted-foreground">
-                    Заполните форму, и мы свяжемся с вами для подтверждения
+                  <p className="text-muted-foreground text-lg">
+                    Выберите удобный способ связи
                   </p>
                 </div>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <Label htmlFor="name" className="text-foreground">
-                      Ваше имя
-                    </Label>
-                    <Input
-                      id="name"
-                      required
-                      value={formData.name}
-                      onChange={(e) =>
-                        setFormData({ ...formData, name: e.target.value })
-                      }
-                      className="mt-2"
-                      placeholder="Иван Иванов"
-                    />
-                  </div>
-                  <div>
-                    <Label htmlFor="phone" className="text-foreground">
-                      Телефон
-                    </Label>
-                    <Input
-                      id="phone"
-                      type="tel"
-                      required
-                      value={formData.phone}
-                      onChange={(e) =>
-                        setFormData({ ...formData, phone: e.target.value })
-                      }
-                      className="mt-2"
-                      placeholder="+7 (999) 123-45-67"
-                    />
-                  </div>
-                  <div>
-                    <Label htmlFor="email" className="text-foreground">
-                      Email
-                    </Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={(e) =>
-                        setFormData({ ...formData, email: e.target.value })
-                      }
-                      className="mt-2"
-                      placeholder="ivan@example.com"
-                    />
-                  </div>
-                  <div>
-                    <Label htmlFor="startDate" className="text-foreground">
-                      Дата начала курса
-                    </Label>
-                    <Select
-                      required
-                      value={formData.startDate}
-                      onValueChange={(value) =>
-                        setFormData({ ...formData, startDate: value })
-                      }
-                    >
-                      <SelectTrigger className="mt-2">
-                        <SelectValue placeholder="Выберите дату" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {courseDates.map((date, index) => (
-                          <SelectItem key={index} value={date}>
-                            {date}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </div>
-                  <Button
-                    type="submit"
-                    className="w-full bg-secondary hover:bg-secondary/90 text-background font-semibold text-lg py-6"
+                
+                <div className="space-y-4">
+                  <a
+                    href="https://wa.me/89193935188?text=Здравствуйте!%20Хочу%20записаться%20на%20курс%20по%20хиромантии"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-3 w-full bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold text-lg py-6 rounded-lg transition-all hover:scale-105 shadow-lg"
                   >
-                    Записаться на курс
-                  </Button>
-                </form>
+                    <Icon name="MessageCircle" size={28} />
+                    <span>Написать в WhatsApp</span>
+                  </a>
+                  
+                  <a
+                    href="mailto:iwan891@bk.ru?subject=Запись%20на%20курс%20по%20хиромантии&body=Здравствуйте!%0A%0AХочу%20записаться%20на%20курс%20по%20хиромантии.%0A%0AМои%20контакты:%0AИмя:%20%0AТелефон:%20%0AПредпочитаемая%20дата%20старта:%20"
+                    className="flex items-center justify-center gap-3 w-full bg-secondary hover:bg-secondary/90 text-background font-semibold text-lg py-6 rounded-lg transition-all hover:scale-105 shadow-lg"
+                  >
+                    <Icon name="Mail" size={28} />
+                    <span>Отправить Email</span>
+                  </a>
+
+                  <div className="mt-8 pt-6 border-t border-border">
+                    <p className="text-center text-muted-foreground text-sm mb-4">
+                      Или позвоните по телефону:
+                    </p>
+                    <a
+                      href="tel:+79193935188"
+                      className="flex items-center justify-center gap-2 text-accent hover:text-secondary transition-colors text-xl font-semibold"
+                    >
+                      <Icon name="Phone" size={24} />
+                      <span>+7 (919) 393-51-88</span>
+                    </a>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </section>
