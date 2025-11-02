@@ -1,0 +1,32 @@
+{
+  "tests": [
+    {
+      "name": "Submit valid application",
+      "method": "POST",
+      "body": {
+        "name": "Иван Тестов",
+        "phone": "+7 (999) 123-45-67",
+        "email": "test@example.com",
+        "startDate": "23 ноября 2025"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Reject incomplete application",
+      "method": "POST",
+      "body": {
+        "name": "Иван",
+        "phone": ""
+      },
+      "expectedStatus": 400,
+      "expectedBody": {
+        "error": "string"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

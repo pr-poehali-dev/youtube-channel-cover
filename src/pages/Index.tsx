@@ -32,13 +32,40 @@ const Index = () => {
     '14 ноября 2026',
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: 'Заявка отправлена!',
-      description: 'Скоро свяжемся с вами для подтверждения записи.',
-    });
-    setFormData({ name: '', phone: '', email: '', startDate: '' });
+    
+    try {
+      const response = await fetch('https://functions.poehali.dev/6f363557-bc4d-4ba0-83c7-04176bfcffaa', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      const data = await response.json();
+      
+      if (response.ok && data.success) {
+        toast({
+          title: 'Заявка отправлена!',
+          description: 'Скоро свяжемся с вами для подтверждения записи.',
+        });
+        setFormData({ name: '', phone: '', email: '', startDate: '' });
+      } else {
+        toast({
+          title: 'Ошибка',
+          description: data.error || 'Не удалось отправить заявку. Попробуйте позже.',
+          variant: 'destructive',
+        });
+      }
+    } catch (error) {
+      toast({
+        title: 'Ошибка',
+        description: 'Не удалось отправить заявку. Проверьте подключение к интернету.',
+        variant: 'destructive',
+      });
+    }
   };
 
   return (
