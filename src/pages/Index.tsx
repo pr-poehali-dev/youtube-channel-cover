@@ -91,7 +91,7 @@ const Index = () => {
                 <div className="flex flex-wrap gap-4 text-lg">
                   <div className="flex items-center gap-2 text-accent">
                     <Icon name="Calendar" size={20} />
-                    <span>10 недель</span>
+                    <span>8 месяцев</span>
                   </div>
                   <div className="flex items-center gap-2 text-accent">
                     <Icon name="Users" size={20} />
@@ -181,7 +181,7 @@ const Index = () => {
               {[
                 {
                   icon: 'Video',
-                  title: '10 занятий',
+                  title: '32 занятия',
                   desc: 'Еженедельные видеоконференции по 60 минут',
                 },
                 {
