@@ -125,7 +125,7 @@ const Index = () => {
                 Комплексная программа от базовых знаний до профессионального уровня
               </p>
             </div>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 {
                   icon: 'Star',
@@ -151,6 +151,21 @@ const Index = () => {
                   icon: 'Coins',
                   title: 'Линия судьбы',
                   desc: 'Карьера, финансы, жизненное предназначение',
+                },
+                {
+                  icon: 'HeartHandshake',
+                  title: 'Линия брака',
+                  desc: 'Отношения, брак, партнёрство',
+                },
+                {
+                  icon: 'Baby',
+                  title: 'Линии детей',
+                  desc: 'Количество детей, их характер и судьба',
+                },
+                {
+                  icon: 'Shapes',
+                  title: 'Знаки и символы',
+                  desc: 'Треугольники, кресты, звёзды и их толкование',
                 },
                 {
                   icon: 'Sparkles',
