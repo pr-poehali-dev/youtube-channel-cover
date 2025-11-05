@@ -24,7 +24,7 @@ const Index = () => {
           <header className="flex justify-between items-center mb-16 animate-fade-in">
             <div className="flex items-center gap-2">
               <Icon name="Hand" size={32} className="text-accent animate-shimmer" />
-              <h1 className="text-3xl font-bold text-accent">Хиромантия с Иваном Линтом</h1>
+              <h1 className="text-3xl font-bold text-accent">Эзотерик Иван Дарт</h1>
             </div>
             <div className="flex gap-4">
               <a
@@ -56,7 +56,7 @@ const Index = () => {
                   Откройте тайны судьбы через линии ваших ладоней
                 </h2>
                 <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                  Профессиональный курс по хиромантии от практикующего хироманта Ивана Линта.
+                  Профессиональный курс по хиромантии от практикующего эзотерика Ивана Дарта.
                   Научитесь читать прошлое, настоящее и будущее по линиям рук.
                 </p>
                 <div className="flex flex-wrap gap-4 text-lg">
