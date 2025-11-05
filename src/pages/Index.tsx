@@ -243,6 +243,74 @@ const Index = () => {
             </div>
           </section>
 
+          <section className="max-w-5xl mx-auto mb-24 animate-fade-in">
+            <div className="text-center mb-12">
+              <Icon name="MessageSquare" size={40} className="text-secondary mx-auto mb-4" />
+              <h3 className="text-4xl font-bold mb-4 text-foreground">Отзывы клиентов</h3>
+              <p className="text-muted-foreground text-lg">
+                Реальные истории людей, открывших свой путь
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6 mb-16">
+              {[
+                {
+                  name: 'Елена',
+                  service: 'Ба Цзы',
+                  text: 'Консультация по Ба Цзы полностью изменила мое понимание жизненных циклов. Иван Дарт дал четкие рекомендации по карьере и личной жизни.',
+                  rating: 5,
+                },
+                {
+                  name: 'Дмитрий',
+                  service: 'Нумерология',
+                  text: 'Нумерологический анализ открыл мне глаза на мои скрытые таланты. Начал действовать по рекомендациям и жизнь пошла в гору!',
+                  rating: 5,
+                },
+                {
+                  name: 'Анна',
+                  service: 'Хиромантия',
+                  text: 'Поразительная точность! По линиям рук Иван рассказал о событиях из прошлого и дал прогноз на будущее. Всё сбывается.',
+                  rating: 5,
+                },
+                {
+                  name: 'Максим',
+                  service: 'Таро',
+                  text: 'Расклад Таро помог принять важное решение в бизнесе. Четкие ответы на конкретные вопросы без воды.',
+                  rating: 5,
+                },
+                {
+                  name: 'Ольга',
+                  service: 'Курс хиромантии',
+                  text: 'Прошла полный курс хиромантии. Невероятная глубина знаний и практический подход. Теперь консультирую сама!',
+                  rating: 5,
+                },
+                {
+                  name: 'Сергей',
+                  service: 'Нумерология',
+                  text: 'Профессиональный подход и внимание к деталям. После консультации получил четкий план действий на год.',
+                  rating: 5,
+                },
+              ].map((review, index) => (
+                <Card
+                  key={index}
+                  className="bg-card border-border hover:border-accent transition-all"
+                >
+                  <CardContent className="p-6">
+                    <div className="flex gap-1 mb-3">
+                      {[...Array(review.rating)].map((_, i) => (
+                        <Icon key={i} name="Star" size={16} className="text-secondary fill-secondary" />
+                      ))}
+                    </div>
+                    <p className="text-muted-foreground mb-4 italic">"{review.text}"</p>
+                    <div>
+                      <p className="font-semibold text-foreground">{review.name}</p>
+                      <p className="text-sm text-accent">{review.service}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </section>
+
           <section className="max-w-4xl mx-auto mb-24 animate-fade-in">
             <div className="text-center mb-12">
               <Icon name="CheckCircle" size={40} className="text-secondary mx-auto mb-4" />
