@@ -207,11 +207,24 @@ const Index = () => {
                         <Icon name="Yin" size={32} className="text-secondary flex-shrink-0" />
                         <div>
                           <h5 className="font-semibold text-foreground mb-1">Ба Цзы (Китайская астрология)</h5>
-                          <p className="text-sm text-muted-foreground">
+                          <p className="text-sm text-muted-foreground mb-2">
                             Древняя китайская система расчета судьбы по дате рождения. Раскрывает ваши природные таланты, 
-                            благоприятные периоды жизни, карьерные направления и совместимость в отношениях. 
-                            Показывает циклы удачи и рекомендации по каждому аспекту жизни.
+                            благоприятные периоды жизни, карьерные направления и совместимость в отношениях.
                           </p>
+                          <div className="text-xs text-muted-foreground/80 space-y-1">
+                            <p className="flex items-start gap-1">
+                              <span className="text-accent">•</span>
+                              <span>Когда лучше менять работу или открывать бизнес?</span>
+                            </p>
+                            <p className="flex items-start gap-1">
+                              <span className="text-accent">•</span>
+                              <span>С каким партнером я буду счастлив?</span>
+                            </p>
+                            <p className="flex items-start gap-1">
+                              <span className="text-accent">•</span>
+                              <span>Какие годы будут удачными для меня?</span>
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -221,11 +234,24 @@ const Index = () => {
                         <Icon name="Hash" size={32} className="text-secondary flex-shrink-0" />
                         <div>
                           <h5 className="font-semibold text-foreground mb-1">Нумерология</h5>
-                          <p className="text-sm text-muted-foreground">
+                          <p className="text-sm text-muted-foreground mb-2">
                             Анализ вашего числового кода через имя и дату рождения. Определяет жизненный путь, 
-                            сильные и слабые стороны характера, кармические задачи и предназначение. 
-                            Помогает понять внутренние мотивации и найти свое истинное призвание.
+                            сильные и слабые стороны характера, кармические задачи и предназначение.
                           </p>
+                          <div className="text-xs text-muted-foreground/80 space-y-1">
+                            <p className="flex items-start gap-1">
+                              <span className="text-accent">•</span>
+                              <span>В чем мое истинное предназначение?</span>
+                            </p>
+                            <p className="flex items-start gap-1">
+                              <span className="text-accent">•</span>
+                              <span>Какие у меня скрытые таланты?</span>
+                            </p>
+                            <p className="flex items-start gap-1">
+                              <span className="text-accent">•</span>
+                              <span>Как преодолеть кармические блоки?</span>
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -235,11 +261,24 @@ const Index = () => {
                         <Icon name="Sparkles" size={32} className="text-secondary flex-shrink-0" />
                         <div>
                           <h5 className="font-semibold text-foreground mb-1">Таро</h5>
-                          <p className="text-sm text-muted-foreground">
+                          <p className="text-sm text-muted-foreground mb-2">
                             Глубокий расклад на текущую ситуацию и важные вопросы. Показывает скрытые влияния, 
-                            возможные развития событий и дает конкретные рекомендации по действиям. 
-                            Помогает принять верные решения в сложных жизненных ситуациях.
+                            возможные развития событий и дает конкретные рекомендации по действиям.
                           </p>
+                          <div className="text-xs text-muted-foreground/80 space-y-1">
+                            <p className="flex items-start gap-1">
+                              <span className="text-accent">•</span>
+                              <span>Как развивается моя ситуация сейчас?</span>
+                            </p>
+                            <p className="flex items-start gap-1">
+                              <span className="text-accent">•</span>
+                              <span>Что мне делать в сложной ситуации?</span>
+                            </p>
+                            <p className="flex items-start gap-1">
+                              <span className="text-accent">•</span>
+                              <span>Какие скрытые факторы влияют на меня?</span>
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -249,11 +288,24 @@ const Index = () => {
                         <Icon name="Hand" size={32} className="text-secondary flex-shrink-0" />
                         <div>
                           <h5 className="font-semibold text-foreground mb-1">Хиромантия</h5>
-                          <p className="text-sm text-muted-foreground">
+                          <p className="text-sm text-muted-foreground mb-2">
                             Чтение линий ладоней раскрывает ваш жизненный путь, здоровье, карьеру, отношения и важные события. 
-                            Позволяет увидеть прошлое, понять настоящее и заглянуть в будущее. 
-                            Дает практические советы по корректировке судьбы.
+                            Позволяет увидеть прошлое, понять настоящее и заглянуть в будущее.
                           </p>
+                          <div className="text-xs text-muted-foreground/80 space-y-1">
+                            <p className="flex items-start gap-1">
+                              <span className="text-accent">•</span>
+                              <span>Сколько у меня будет браков и детей?</span>
+                            </p>
+                            <p className="flex items-start gap-1">
+                              <span className="text-accent">•</span>
+                              <span>Какие важные события меня ждут?</span>
+                            </p>
+                            <p className="flex items-start gap-1">
+                              <span className="text-accent">•</span>
+                              <span>Как укрепить здоровье и энергию?</span>
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
