@@ -379,6 +379,91 @@ const Index = () => {
             </div>
           </section>
 
+          <section className="max-w-5xl mx-auto mb-24 animate-fade-in">
+            <div className="text-center mb-12">
+              <Icon name="User" size={40} className="text-secondary mx-auto mb-4" />
+              <h3 className="text-4xl font-bold mb-4 text-foreground">Обо мне</h3>
+              <p className="text-muted-foreground text-lg">
+                Иван Дарт — практикующий эзотерик с многолетним опытом
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="bg-card border-border">
+                <CardContent className="p-8">
+                  <div className="flex gap-4 items-start mb-6">
+                    <Icon name="GraduationCap" size={32} className="text-secondary flex-shrink-0" />
+                    <div>
+                      <h4 className="text-xl font-semibold text-foreground mb-2">Образование и практика</h4>
+                      <p className="text-muted-foreground leading-relaxed">
+                        Более 10 лет изучаю эзотерические практики. Прошёл обучение у ведущих мастеров хиромантии, 
+                        китайской метафизики Ба Цзы и нумерологии. Регулярно повышаю квалификацию на международных 
+                        семинарах и курсах.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-4 items-start">
+                    <Icon name="Users" size={32} className="text-secondary flex-shrink-0" />
+                    <div>
+                      <h4 className="text-xl font-semibold text-foreground mb-2">Опыт консультаций</h4>
+                      <p className="text-muted-foreground leading-relaxed">
+                        Провёл более 1000 личных консультаций. Помогаю людям найти своё предназначение, 
+                        понять жизненные циклы, принять важные решения в карьере и отношениях. 
+                        Каждая консультация — индивидуальный подход и глубокий анализ.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-card border-border">
+                <CardContent className="p-8">
+                  <div className="flex gap-4 items-start mb-6">
+                    <Icon name="Lightbulb" size={32} className="text-secondary flex-shrink-0" />
+                    <div>
+                      <h4 className="text-xl font-semibold text-foreground mb-2">Специализация</h4>
+                      <div className="space-y-3 text-muted-foreground">
+                        <div className="flex items-start gap-2">
+                          <Icon name="CheckCircle2" size={18} className="text-accent mt-0.5 flex-shrink-0" />
+                          <span>Хиромантия — чтение линий ладони, прогноз событий</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <Icon name="CheckCircle2" size={18} className="text-accent mt-0.5 flex-shrink-0" />
+                          <span>Китайская астрология Ба Цзы — анализ судьбы и выбор благоприятных дат</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <Icon name="CheckCircle2" size={18} className="text-accent mt-0.5 flex-shrink-0" />
+                          <span>Нумерология — расчёт матрицы судьбы и кармических задач</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <Icon name="CheckCircle2" size={18} className="text-accent mt-0.5 flex-shrink-0" />
+                          <span>Таро — диагностика ситуаций и прогнозы</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="md:col-span-2 bg-gradient-to-r from-secondary/10 to-accent/10 border-secondary/30">
+                <CardContent className="p-8">
+                  <div className="flex gap-4 items-start">
+                    <Icon name="Target" size={32} className="text-secondary flex-shrink-0" />
+                    <div>
+                      <h4 className="text-xl font-semibold text-foreground mb-3">Моя миссия</h4>
+                      <p className="text-muted-foreground leading-relaxed">
+                        Моя цель — помочь вам раскрыть внутренний потенциал и понять свой жизненный путь. 
+                        Я верю, что каждый человек приходит в этот мир с определённой миссией, и моя задача — 
+                        помочь вам её увидеть. Использую проверенные древние методики и современный подход, 
+                        чтобы дать максимально точные и полезные рекомендации. Работаю честно, конфиденциально 
+                        и с заботой о каждом клиенте.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </section>
+
           <section className="max-w-4xl mx-auto mb-24 animate-fade-in">
             <div className="text-center mb-12">
               <Icon name="BookOpen" size={40} className="text-secondary mx-auto mb-4" />
