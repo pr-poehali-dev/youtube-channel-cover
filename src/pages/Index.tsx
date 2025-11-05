@@ -88,10 +88,60 @@ const Index = () => {
             </div>
           </section>
 
+          <section className="max-w-5xl mx-auto mb-24 animate-fade-in">
+            <div className="text-center mb-12">
+              <Icon name="Sparkles" size={40} className="text-secondary mx-auto mb-4" />
+              <h3 className="text-4xl font-bold mb-4 text-foreground">Услуги и консультации</h3>
+              <p className="text-muted-foreground text-lg">
+                Персональные анализы для раскрытия вашего потенциала
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+              {[
+                {
+                  icon: 'Yin',
+                  title: 'Китайская астрология Ба Цзы',
+                  price: '5 000₽',
+                  desc: 'Глубокий анализ судьбы через китайскую метафизику',
+                },
+                {
+                  icon: 'Hash',
+                  title: 'Нумерология',
+                  price: '5 000₽',
+                  desc: 'Раскрытие кода вашей личности через числа',
+                },
+                {
+                  icon: 'Sparkles',
+                  title: 'Таро',
+                  price: '2 000₽',
+                  desc: 'Ответы на важные вопросы через карты Таро',
+                },
+                {
+                  icon: 'Hand',
+                  title: 'Хиромантия',
+                  price: '5 000₽',
+                  desc: 'Чтение судьбы по линиям ваших ладоней',
+                },
+              ].map((item, index) => (
+                <Card
+                  key={index}
+                  className="bg-card border-border hover:border-accent transition-all hover:scale-105 hover:shadow-xl"
+                >
+                  <CardContent className="p-6 text-center">
+                    <Icon name={item.icon as any} size={48} className="text-secondary mb-4 mx-auto" />
+                    <h4 className="text-xl font-semibold mb-2 text-foreground">{item.title}</h4>
+                    <p className="text-3xl font-bold text-accent mb-3">{item.price}</p>
+                    <p className="text-muted-foreground text-sm">{item.desc}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </section>
+
           <section className="max-w-4xl mx-auto mb-24 animate-fade-in">
             <div className="text-center mb-12">
               <Icon name="BookOpen" size={40} className="text-secondary mx-auto mb-4" />
-              <h3 className="text-4xl font-bold mb-4 text-foreground">Программа обучения</h3>
+              <h3 className="text-4xl font-bold mb-4 text-foreground">Программа обучения хиромантии</h3>
               <p className="text-muted-foreground text-lg">
                 Комплексная программа от базовых знаний до профессионального уровня
               </p>
