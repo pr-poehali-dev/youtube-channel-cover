@@ -12,6 +12,37 @@ const Index = () => {
     '14 ноября 2026',
   ];
 
+  const services = [
+    {
+      icon: 'Yin',
+      title: 'Китайская астрология Ба Цзы',
+      price: '5 000₽',
+      desc: 'Глубокий анализ судьбы через китайскую метафизику',
+      message: 'Здравствуйте! Хочу записаться на консультацию по Ба Цзы',
+    },
+    {
+      icon: 'Hash',
+      title: 'Нумерология',
+      price: '5 000₽',
+      desc: 'Раскрытие кода вашей личности через числа',
+      message: 'Здравствуйте! Хочу записаться на консультацию по нумерологии',
+    },
+    {
+      icon: 'Sparkles',
+      title: 'Таро',
+      price: '2 000₽',
+      desc: 'Ответы на важные вопросы через карты Таро',
+      message: 'Здравствуйте! Хочу записаться на расклад Таро',
+    },
+    {
+      icon: 'Hand',
+      title: 'Хиромантия',
+      price: '5 000₽',
+      desc: 'Чтение судьбы по линиям ваших ладоней',
+      message: 'Здравствуйте! Хочу записаться на консультацию по хиромантии',
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <div
@@ -97,32 +128,7 @@ const Index = () => {
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-              {[
-                {
-                  icon: 'Yin',
-                  title: 'Китайская астрология Ба Цзы',
-                  price: '5 000₽',
-                  desc: 'Глубокий анализ судьбы через китайскую метафизику',
-                },
-                {
-                  icon: 'Hash',
-                  title: 'Нумерология',
-                  price: '5 000₽',
-                  desc: 'Раскрытие кода вашей личности через числа',
-                },
-                {
-                  icon: 'Sparkles',
-                  title: 'Таро',
-                  price: '2 000₽',
-                  desc: 'Ответы на важные вопросы через карты Таро',
-                },
-                {
-                  icon: 'Hand',
-                  title: 'Хиромантия',
-                  price: '5 000₽',
-                  desc: 'Чтение судьбы по линиям ваших ладоней',
-                },
-              ].map((item, index) => (
+              {services.map((item, index) => (
                 <Card
                   key={index}
                   className="bg-card border-border hover:border-accent transition-all hover:scale-105 hover:shadow-xl"
@@ -131,7 +137,16 @@ const Index = () => {
                     <Icon name={item.icon as any} size={48} className="text-secondary mb-4 mx-auto" />
                     <h4 className="text-xl font-semibold mb-2 text-foreground">{item.title}</h4>
                     <p className="text-3xl font-bold text-accent mb-3">{item.price}</p>
-                    <p className="text-muted-foreground text-sm">{item.desc}</p>
+                    <p className="text-muted-foreground text-sm mb-4">{item.desc}</p>
+                    <a
+                      href={`https://wa.me/89193935188?text=${encodeURIComponent(item.message)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 w-full px-4 py-2 bg-accent hover:bg-accent/90 text-background font-semibold rounded-lg transition-colors"
+                    >
+                      <Icon name="MessageCircle" size={18} />
+                      Записаться
+                    </a>
                   </CardContent>
                 </Card>
               ))}
