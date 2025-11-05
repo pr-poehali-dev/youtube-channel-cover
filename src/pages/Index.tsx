@@ -331,6 +331,56 @@ const Index = () => {
 
           <section className="max-w-4xl mx-auto mb-24 animate-fade-in">
             <div className="text-center mb-12">
+              <Icon name="HelpCircle" size={40} className="text-secondary mx-auto mb-4" />
+              <h3 className="text-4xl font-bold mb-4 text-foreground">Частые вопросы</h3>
+              <p className="text-muted-foreground text-lg">
+                Ответы на популярные вопросы о консультациях
+              </p>
+            </div>
+            <div className="space-y-4">
+              {[
+                {
+                  question: 'Как проходит консультация?',
+                  answer: 'Консультация проходит онлайн через видеозвонок или WhatsApp. Для анализа мне потребуются ваши данные: дата, время и место рождения, фото ладоней. Продолжительность — от 60 до 90 минут в зависимости от выбранной услуги.',
+                },
+                {
+                  question: 'Что нужно подготовить для консультации?',
+                  answer: 'Для Ба Цзы и нумерологии — точное время и место рождения. Для хиромантии — качественные фото обеих ладоней при хорошем освещении. Для Таро — сформулированные вопросы. Для комплексного анализа — всё вышеперечисленное.',
+                },
+                {
+                  question: 'Сколько длится анализ?',
+                  answer: 'Отдельная консультация длится 60-90 минут. Комплексный анализ — до 2,5 часов, так как включает все четыре метода. После консультации вы получаете аудиозапись и краткую текстовую выжимку ключевых рекомендаций.',
+                },
+                {
+                  question: 'Можно ли задать дополнительные вопросы после?',
+                  answer: 'Да! В течение 3 дней после консультации вы можете задать уточняющие вопросы в переписке. Это бесплатно и входит в стоимость любой консультации.',
+                },
+                {
+                  question: 'Чем комплексный анализ лучше отдельных?',
+                  answer: 'Комплексный анализ дает полную картину с разных углов: Ба Цзы показывает циклы и периоды, нумерология — предназначение, Таро — текущую ситуацию, хиромантия — события и здоровье. Вместе они дают максимально точный прогноз. Плюс вы экономите 5 000₽.',
+                },
+                {
+                  question: 'Конфиденциальность гарантирована?',
+                  answer: 'Абсолютно! Вся информация строго конфиденциальна. Я не передаю ваши данные третьим лицам и не публикую результаты консультаций без вашего согласия.',
+                },
+              ].map((item, index) => (
+                <Card key={index} className="bg-card border-border hover:border-accent transition-all">
+                  <CardContent className="p-6">
+                    <div className="flex gap-3 items-start">
+                      <Icon name="Circle" size={8} className="text-secondary mt-2 flex-shrink-0" />
+                      <div>
+                        <h4 className="text-lg font-semibold text-foreground mb-2">{item.question}</h4>
+                        <p className="text-muted-foreground text-sm leading-relaxed">{item.answer}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </section>
+
+          <section className="max-w-4xl mx-auto mb-24 animate-fade-in">
+            <div className="text-center mb-12">
               <Icon name="BookOpen" size={40} className="text-secondary mx-auto mb-4" />
               <h3 className="text-4xl font-bold mb-4 text-foreground">Программа обучения хиромантии</h3>
               <p className="text-muted-foreground text-lg">
