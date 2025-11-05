@@ -14,6 +14,16 @@ const Index = () => {
 
   const services = [
     {
+      icon: 'Crown',
+      title: 'Комплексный анализ',
+      subtitle: 'Астрология + Нумерология + Таро + Хиромантия',
+      price: '12 000₽',
+      oldPrice: '17 000₽',
+      desc: 'Полное раскрытие вашего потенциала. Выгодно!',
+      message: 'Здравствуйте! Хочу записаться на комплексный анализ',
+      featured: true,
+    },
+    {
       icon: 'Yin',
       title: 'Китайская астрология Ба Цзы',
       price: '5 000₽',
@@ -127,24 +137,50 @@ const Index = () => {
                 Персональные анализы для раскрытия вашего потенциала
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
               {services.map((item, index) => (
                 <Card
                   key={index}
-                  className="bg-card border-border hover:border-accent transition-all hover:scale-105 hover:shadow-xl"
+                  className={`bg-card border-border hover:border-accent transition-all hover:scale-105 hover:shadow-xl ${
+                    item.featured ? 'md:col-span-2 lg:col-span-3 border-2 border-secondary' : ''
+                  }`}
                 >
-                  <CardContent className="p-6 text-center">
-                    <Icon name={item.icon as any} size={48} className="text-secondary mb-4 mx-auto" />
-                    <h4 className="text-xl font-semibold mb-2 text-foreground">{item.title}</h4>
-                    <p className="text-3xl font-bold text-accent mb-3">{item.price}</p>
+                  <CardContent className={`p-6 ${item.featured ? 'text-center' : 'text-center'}`}>
+                    {item.featured && (
+                      <div className="inline-block bg-secondary text-background text-xs font-bold px-3 py-1 rounded-full mb-3">
+                        ВЫГОДНОЕ ПРЕДЛОЖЕНИЕ
+                      </div>
+                    )}
+                    <Icon name={item.icon as any} size={item.featured ? 56 : 48} className="text-secondary mb-4 mx-auto" />
+                    <h4 className={`${item.featured ? 'text-2xl' : 'text-xl'} font-semibold mb-2 text-foreground`}>
+                      {item.title}
+                    </h4>
+                    {item.subtitle && (
+                      <p className="text-sm text-muted-foreground mb-3">{item.subtitle}</p>
+                    )}
+                    <div className="mb-3">
+                      {item.oldPrice && (
+                        <p className="text-lg text-muted-foreground line-through mb-1">{item.oldPrice}</p>
+                      )}
+                      <p className={`${item.featured ? 'text-4xl' : 'text-3xl'} font-bold text-accent`}>
+                        {item.price}
+                      </p>
+                      {item.featured && (
+                        <p className="text-sm text-secondary font-semibold mt-1">Экономия 5 000₽</p>
+                      )}
+                    </div>
                     <p className="text-muted-foreground text-sm mb-4">{item.desc}</p>
                     <a
                       href={`https://wa.me/89193935188?text=${encodeURIComponent(item.message)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 w-full px-4 py-2 bg-accent hover:bg-accent/90 text-background font-semibold rounded-lg transition-colors"
+                      className={`inline-flex items-center justify-center gap-2 w-full px-4 py-3 ${
+                        item.featured
+                          ? 'bg-secondary hover:bg-secondary/90 text-background text-lg'
+                          : 'bg-accent hover:bg-accent/90 text-background'
+                      } font-semibold rounded-lg transition-colors`}
                     >
-                      <Icon name="MessageCircle" size={18} />
+                      <Icon name="MessageCircle" size={20} />
                       Записаться
                     </a>
                   </CardContent>
