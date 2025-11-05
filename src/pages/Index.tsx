@@ -398,19 +398,6 @@ const Index = () => {
                     <Icon name="Mail" size={28} />
                     <span>Отправить Email</span>
                   </a>
-
-                  <div className="mt-8 pt-6 border-t border-border">
-                    <p className="text-center text-muted-foreground text-sm mb-4">
-                      Или позвоните по телефону:
-                    </p>
-                    <a
-                      href="tel:+79193935188"
-                      className="flex items-center justify-center gap-2 text-accent hover:text-secondary transition-colors text-xl font-semibold"
-                    >
-                      <Icon name="Phone" size={24} />
-                      <span>+7 (919) 393-51-88</span>
-                    </a>
-                  </div>
                 </div>
               </CardContent>
             </Card>
