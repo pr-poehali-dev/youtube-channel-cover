@@ -187,6 +187,94 @@ const Index = () => {
                 </Card>
               ))}
             </div>
+
+            <div className="max-w-4xl mx-auto">
+              <Card className="bg-card border-accent">
+                <CardContent className="p-8">
+                  <div className="text-center mb-8">
+                    <Icon name="Info" size={40} className="text-secondary mx-auto mb-4" />
+                    <h4 className="text-2xl font-bold text-foreground mb-2">
+                      Что входит в комплексный анализ?
+                    </h4>
+                    <p className="text-muted-foreground">
+                      Четыре мощных метода для полного понимания вашей судьбы
+                    </p>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="space-y-3">
+                      <div className="flex gap-3">
+                        <Icon name="Yin" size={32} className="text-secondary flex-shrink-0" />
+                        <div>
+                          <h5 className="font-semibold text-foreground mb-1">Ба Цзы (Китайская астрология)</h5>
+                          <p className="text-sm text-muted-foreground">
+                            Древняя китайская система расчета судьбы по дате рождения. Раскрывает ваши природные таланты, 
+                            благоприятные периоды жизни, карьерные направления и совместимость в отношениях. 
+                            Показывает циклы удачи и рекомендации по каждому аспекту жизни.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="space-y-3">
+                      <div className="flex gap-3">
+                        <Icon name="Hash" size={32} className="text-secondary flex-shrink-0" />
+                        <div>
+                          <h5 className="font-semibold text-foreground mb-1">Нумерология</h5>
+                          <p className="text-sm text-muted-foreground">
+                            Анализ вашего числового кода через имя и дату рождения. Определяет жизненный путь, 
+                            сильные и слабые стороны характера, кармические задачи и предназначение. 
+                            Помогает понять внутренние мотивации и найти свое истинное призвание.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="space-y-3">
+                      <div className="flex gap-3">
+                        <Icon name="Sparkles" size={32} className="text-secondary flex-shrink-0" />
+                        <div>
+                          <h5 className="font-semibold text-foreground mb-1">Таро</h5>
+                          <p className="text-sm text-muted-foreground">
+                            Глубокий расклад на текущую ситуацию и важные вопросы. Показывает скрытые влияния, 
+                            возможные развития событий и дает конкретные рекомендации по действиям. 
+                            Помогает принять верные решения в сложных жизненных ситуациях.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="space-y-3">
+                      <div className="flex gap-3">
+                        <Icon name="Hand" size={32} className="text-secondary flex-shrink-0" />
+                        <div>
+                          <h5 className="font-semibold text-foreground mb-1">Хиромантия</h5>
+                          <p className="text-sm text-muted-foreground">
+                            Чтение линий ладоней раскрывает ваш жизненный путь, здоровье, карьеру, отношения и важные события. 
+                            Позволяет увидеть прошлое, понять настоящее и заглянуть в будущее. 
+                            Дает практические советы по корректировке судьбы.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="mt-8 p-6 bg-secondary/10 rounded-lg border border-secondary/30">
+                    <div className="flex gap-3 items-start">
+                      <Icon name="CheckCircle" size={24} className="text-secondary flex-shrink-0 mt-1" />
+                      <div>
+                        <h5 className="font-semibold text-foreground mb-2">Результат комплексного анализа</h5>
+                        <p className="text-sm text-muted-foreground">
+                          Вы получите полную картину своей жизни с разных точек зрения. Каждый метод дополняет другой, 
+                          создавая глубокое понимание вашего предназначения, сильных сторон и возможностей. 
+                          Вы узнаете оптимальные направления развития и получите конкретный план действий на ближайший год.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </section>
 
           <section className="max-w-4xl mx-auto mb-24 animate-fade-in">
